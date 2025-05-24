@@ -1,0 +1,16 @@
+name: "Hello world workflow"
+
+#this will triggger the fworkflow when a push is done on master or production branch
+on:
+  push:
+    branches:
+      - master
+      - production
+
+jobs:
+  hello_world: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Print Hello world"
+        run: echo "Hello world"
+      
